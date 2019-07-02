@@ -22,7 +22,22 @@ namespace Quanlythuvien
 
         }
 
-        private void label1_Click(object sender, EventArgs e)
+        private void quarnToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void tạoTàiKhoảnToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void đọcGiảToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void menuStrip1_ItemClicked(object sender, ToolStripItemClickedEventArgs e)
         {
 
         }
