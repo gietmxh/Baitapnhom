@@ -11,6 +11,7 @@ using System.Data.SqlClient;
 
 
 
+
 namespace Quanlythuvien
 {
     public partial class Form2 : Form
@@ -30,22 +31,7 @@ namespace Quanlythuvien
 
         private void button2_Click(object sender, EventArgs e)
         {
-            int i = 0;
-            do
-            {
-                if (txtTaiKhoan.Text == "" || txtMatKhau.Text == "")
-                {
-                    Form  form = new Form ();
-                    form.Show();
-                    Application.Run(new Form ());
-                }
-                else
-                {
-                    i = i + 1;
-                    MessageBox.Show("dang nhap sai");
-                }
-            }
-            while (i < 2);
+            DataTable da = new DataTable();
 
         }
     }

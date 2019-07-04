@@ -16,5 +16,26 @@ namespace Quanlythuvien
         {
             InitializeComponent();
         }
+
+        private void label4_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnOK_Click(object sender, EventArgs e)
+        {
+            if (txtOldPassword.Text == "")
+                MessageBox.Show("Chưa nhập password cũ");
+            else if (txtnewpassword.Text == "")
+                MessageBox.Show("Chưa nhập password mới");
+            else if (txtconfirmnewpassword.Text == "")
+                MessageBox.Show("Chưa nhập lại password mới");
+            else if (txtnewpassword.Text != txtconfirmnewpassword.Text)
+                MessageBox.Show("Password không trùng khớp");
+           else
+            {
+
+            }
+        }
     }
 }
