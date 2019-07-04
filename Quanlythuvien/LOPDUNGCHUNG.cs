@@ -15,7 +15,7 @@ namespace Quanlythuvien
     class LOPDUNGCHUNG
     {
 
-        string connect_string = @"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=" + Application.StartupPath + "/Database2.mdf;Integrated Security=True";
+        string connect_string = @"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=" + Application.StartupPath + "\\Database2.mdf;Integrated Security=True";
 
         SqlConnection conn;
 
