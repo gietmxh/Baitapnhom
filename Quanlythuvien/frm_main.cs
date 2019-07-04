@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace Quanlythuvien
 {
-    public partial class Form1 : Form
+    public partial class frm_main : Form
     {
-        public Form1()
+        public frm_main()
         {
             InitializeComponent();
         }
@@ -58,10 +58,9 @@ namespace Quanlythuvien
             a.Show();
         }
 
-        private void quảnLýNXBToolStripMenuItem_Click(object sender, EventArgs e)
+        private void menuStrip1_ItemClicked_1(object sender, ToolStripItemClickedEventArgs e)
         {
-            frm_nhaxuatban b = new frm_nhaxuatban();
-            b.Show();
+            
         }
     }
 }
