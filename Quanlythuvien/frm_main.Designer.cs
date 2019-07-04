@@ -124,7 +124,6 @@
             this.quảnLýNXBToolStripMenuItem.Name = "quảnLýNXBToolStripMenuItem";
             this.quảnLýNXBToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.quảnLýNXBToolStripMenuItem.Text = "Quản Lý NXB";
-            this.quảnLýNXBToolStripMenuItem.Click += new System.EventHandler(this.quảnLýNXBToolStripMenuItem_Click);
             // 
             // thuêSáchToolStripMenuItem
             // 
