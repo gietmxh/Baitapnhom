@@ -1,6 +1,6 @@
 ﻿namespace Quanlythuvien
 {
-    partial class Form2
+    partial class frm_dangnhap
     {
         /// <summary>
         /// Required designer variable.
@@ -40,14 +40,15 @@
             // 
             // txtTaiKhoan
             // 
-            this.txtTaiKhoan.Location = new System.Drawing.Point(286, 34);
+            this.txtTaiKhoan.Location = new System.Drawing.Point(353, 64);
             this.txtTaiKhoan.Name = "txtTaiKhoan";
             this.txtTaiKhoan.Size = new System.Drawing.Size(188, 20);
             this.txtTaiKhoan.TabIndex = 0;
+            this.txtTaiKhoan.TextChanged += new System.EventHandler(this.txtTaiKhoan_TextChanged);
             // 
             // txtMatKhau
             // 
-            this.txtMatKhau.Location = new System.Drawing.Point(286, 85);
+            this.txtMatKhau.Location = new System.Drawing.Point(353, 108);
             this.txtMatKhau.Name = "txtMatKhau";
             this.txtMatKhau.Size = new System.Drawing.Size(188, 20);
             this.txtMatKhau.TabIndex = 1;
@@ -55,7 +56,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(178, 37);
+            this.label1.Location = new System.Drawing.Point(188, 67);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(59, 13);
             this.label1.TabIndex = 2;
@@ -64,7 +65,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(300, 9);
+            this.label2.Location = new System.Drawing.Point(281, 20);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(71, 13);
             this.label2.TabIndex = 3;
@@ -73,7 +74,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(178, 85);
+            this.label3.Location = new System.Drawing.Point(188, 108);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(56, 13);
             this.label3.TabIndex = 4;
@@ -90,7 +91,7 @@
             // 
             // btnDangNhap
             // 
-            this.btnDangNhap.Location = new System.Drawing.Point(286, 131);
+            this.btnDangNhap.Location = new System.Drawing.Point(222, 165);
             this.btnDangNhap.Name = "btnDangNhap";
             this.btnDangNhap.Size = new System.Drawing.Size(80, 23);
             this.btnDangNhap.TabIndex = 6;
@@ -100,14 +101,15 @@
             // 
             // btnThoat
             // 
-            this.btnThoat.Location = new System.Drawing.Point(394, 131);
+            this.btnThoat.Location = new System.Drawing.Point(353, 165);
             this.btnThoat.Name = "btnThoat";
             this.btnThoat.Size = new System.Drawing.Size(80, 23);
             this.btnThoat.TabIndex = 7;
             this.btnThoat.Text = "THOÁT";
             this.btnThoat.UseVisualStyleBackColor = true;
+            this.btnThoat.Click += new System.EventHandler(this.btnThoat_Click);
             // 
-            // Form2
+            // frm_dangnhap
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -120,8 +122,9 @@
             this.Controls.Add(this.label1);
             this.Controls.Add(this.txtMatKhau);
             this.Controls.Add(this.txtTaiKhoan);
-            this.Name = "Form2";
+            this.Name = "frm_dangnhap";
             this.Text = "Form2";
+            this.Load += new System.EventHandler(this.Form2_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
