@@ -34,8 +34,13 @@ namespace Quanlythuvien
                 MessageBox.Show("Password không trùng khớp");
            else
             {
-
+              
             }
+        }
+
+        private void Form3_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

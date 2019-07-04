@@ -57,5 +57,11 @@ namespace Quanlythuvien
             frm_docgia a = new frm_docgia();
             a.Show();
         }
+
+        private void quảnLýNXBToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frm_nhaxuatban b = new frm_nhaxuatban();
+            b.Show();
+        }
     }
 }

@@ -37,6 +37,8 @@
             this.btnEXIT = new System.Windows.Forms.Button();
             this.label4 = new System.Windows.Forms.Label();
             this.txtOldPassword = new System.Windows.Forms.TextBox();
+            this.label5 = new System.Windows.Forms.Label();
+            this.txtUserName = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // label1
@@ -51,7 +53,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(264, 95);
+            this.label2.Location = new System.Drawing.Point(264, 144);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(78, 13);
             this.label2.TabIndex = 1;
@@ -60,7 +62,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(264, 140);
+            this.label3.Location = new System.Drawing.Point(264, 176);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(116, 13);
             this.label3.TabIndex = 2;
@@ -68,21 +70,21 @@
             // 
             // txtnewpassword
             // 
-            this.txtnewpassword.Location = new System.Drawing.Point(405, 95);
+            this.txtnewpassword.Location = new System.Drawing.Point(405, 137);
             this.txtnewpassword.Name = "txtnewpassword";
             this.txtnewpassword.Size = new System.Drawing.Size(195, 20);
             this.txtnewpassword.TabIndex = 3;
             // 
             // txtconfirmnewpassword
             // 
-            this.txtconfirmnewpassword.Location = new System.Drawing.Point(405, 133);
+            this.txtconfirmnewpassword.Location = new System.Drawing.Point(405, 176);
             this.txtconfirmnewpassword.Name = "txtconfirmnewpassword";
             this.txtconfirmnewpassword.Size = new System.Drawing.Size(195, 20);
             this.txtconfirmnewpassword.TabIndex = 4;
             // 
             // btnOK
             // 
-            this.btnOK.Location = new System.Drawing.Point(449, 181);
+            this.btnOK.Location = new System.Drawing.Point(525, 220);
             this.btnOK.Name = "btnOK";
             this.btnOK.Size = new System.Drawing.Size(75, 23);
             this.btnOK.TabIndex = 5;
@@ -92,7 +94,7 @@
             // 
             // btnEXIT
             // 
-            this.btnEXIT.Location = new System.Drawing.Point(330, 181);
+            this.btnEXIT.Location = new System.Drawing.Point(405, 220);
             this.btnEXIT.Name = "btnEXIT";
             this.btnEXIT.Size = new System.Drawing.Size(75, 23);
             this.btnEXIT.TabIndex = 6;
@@ -102,7 +104,7 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(264, 59);
+            this.label4.Location = new System.Drawing.Point(264, 108);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(72, 13);
             this.label4.TabIndex = 7;
@@ -111,16 +113,34 @@
             // 
             // txtOldPassword
             // 
-            this.txtOldPassword.Location = new System.Drawing.Point(405, 59);
+            this.txtOldPassword.Location = new System.Drawing.Point(405, 108);
             this.txtOldPassword.Name = "txtOldPassword";
             this.txtOldPassword.Size = new System.Drawing.Size(195, 20);
             this.txtOldPassword.TabIndex = 8;
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(264, 74);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(60, 13);
+            this.label5.TabIndex = 9;
+            this.label5.Text = "User Name";
+            // 
+            // txtUserName
+            // 
+            this.txtUserName.Location = new System.Drawing.Point(405, 74);
+            this.txtUserName.Name = "txtUserName";
+            this.txtUserName.Size = new System.Drawing.Size(195, 20);
+            this.txtUserName.TabIndex = 10;
             // 
             // Form3
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(850, 361);
+            this.Controls.Add(this.txtUserName);
+            this.Controls.Add(this.label5);
             this.Controls.Add(this.txtOldPassword);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.btnEXIT);
@@ -131,7 +151,8 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Name = "Form3";
-            this.Text = "Form3";
+            this.Text = "Đổi Mật Khẩu";
+            this.Load += new System.EventHandler(this.Form3_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -148,5 +169,7 @@
         private System.Windows.Forms.Button btnEXIT;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.TextBox txtOldPassword;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.TextBox txtUserName;
     }
 }

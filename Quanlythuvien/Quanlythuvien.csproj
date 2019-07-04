@@ -85,6 +85,12 @@
     <Compile Include="frm_docgia.Designer.cs">
       <DependentUpon>frm_docgia.cs</DependentUpon>
     </Compile>
+    <Compile Include="frm_nhaxuatban.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_nhaxuatban.Designer.cs">
+      <DependentUpon>frm_nhaxuatban.cs</DependentUpon>
+    </Compile>
     <Compile Include="LOPDUNGCHUNG.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -96,6 +102,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Form3.resx">
       <DependentUpon>Form3.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm_nhaxuatban.resx">
+      <DependentUpon>frm_nhaxuatban.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
