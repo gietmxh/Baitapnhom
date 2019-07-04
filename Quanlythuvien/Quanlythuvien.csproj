@@ -79,6 +79,12 @@
     <Compile Include="Form3.Designer.cs">
       <DependentUpon>Form3.cs</DependentUpon>
     </Compile>
+    <Compile Include="frm_docgia.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_docgia.Designer.cs">
+      <DependentUpon>frm_docgia.cs</DependentUpon>
+    </Compile>
     <Compile Include="LOPDUNGCHUNG.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

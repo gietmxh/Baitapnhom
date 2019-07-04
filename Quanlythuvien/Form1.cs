@@ -41,5 +41,21 @@ namespace Quanlythuvien
         {
 
         }
+
+        private void heToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void đổiMậtKhẩiToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void quảnLýĐọcGiảToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            frm_docgia a = new frm_docgia();
+            a.Show();
+        }
     }
 }
