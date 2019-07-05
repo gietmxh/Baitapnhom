@@ -49,6 +49,12 @@ namespace Quanlythuvien
 
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
+            txtMasach.Text = dataGridView1.CurrentRow.Cells["Masach"].Value.ToString();
+            txtTensach.Text = dataGridView1.CurrentRow.Cells["Tensach"].Value.ToString();
+            txtMatacgia.Text = dataGridView1.CurrentRow.Cells["Matacgia"].Value.ToString();
+            txtMatheloai.Text = dataGridView1.CurrentRow.Cells["Matheloai"].Value.ToString();
+            txtManhaxuatban.Text = dataGridView1.CurrentRow.Cells["Manhaxuatban"].Value.ToString();
+            txtNamxuatban.Text = dataGridView1.CurrentRow.Cells["Namxuatban"].Value.ToString();
 
         }
 
