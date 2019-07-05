@@ -12,62 +12,91 @@ namespace Quanlythuvien
 {
     public partial class frm_nhaxuatban : Form
     {
-        LOPDUNGCHUNG lopchung = new LOPDUNGCHUNG();
+        LOPDUNGCHUNG a = new LOPDUNGCHUNG();
         public frm_nhaxuatban()
         {
             InitializeComponent();
         }
-        public void LoadData(string sql)
-        {
-            DataTable dt = lopchung.LayDuLieuBang(sql);
-            dataGridView1.DataSource = dt;
-        }
-
+       
         private void btnThem_Click(object sender, EventArgs e)
         {
+            string MaNXB = txtMaNXB.Text.ToString();
+            string TenNXB = txtTenNXB.Text.ToString();
            
-            string sql = "INSERT INTO NHAXUATBAN VALUE('" + txtMaNXB + "')";
-            if (lopchung.ThemSuaXoa(sql) == 1)
+            string sql = "INSERT INTO NHAXUATBAN VALUE('" + txtMaNXB + "','"+txtTenNXB+"')";
+            int ketqua = a.ThemSuaXoa(sql);
+
+            if (ketqua == 1)
             {
-                MessageBox.Show("Them thanh cong");
-                LoadData("SELeCT *FROM NHAXUATBAN");
+                MessageBox.Show("thêm thành công");
+
+                DataTable dt = a.LayDuLieuBang("SELECT * FROM DOCGIA");
+
+                dataGridView1.DataSource = dt;
+
+
             }
             else
             {
-                MessageBox.Show("That bai");
-
+                MessageBox.Show("lỗi");
             }
+
         }
 
         private void btnCapNhap_Click(object sender, EventArgs e)
         {
-            string sql = "UPDATA SINH VIEN set MaNXB='" + txtMaNXB.Text.ToString() + "',TenNXB='" + txtTenNXB.Text.ToString() + "'";
-            if (lopchung.ThemSuaXoa(sql) == 1)
+            string MaNXB = txtMaNXB.Text.ToString();
+            string TenNXB = txtTenNXB.Text.ToString();
+
+            string sql = "UPDATA NHAXUATBAN SET MANXB='"+MaNXB+"',TENNXB ='"+TenNXB+"'";
+            int ketqua = a.ThemSuaXoa(sql);
+
+            if (ketqua == 1)
             {
-                MessageBox.Show("Thanh cong");
-                LoadData("SELECT *FROM NHAXUATBAN");
+                MessageBox.Show("Sửa thành công");
+
+                DataTable dt = a.LayDuLieuBang("SELECT * FROM NHAXUATBAN");
+
+                dataGridView1.DataSource = dt;
+
+
             }
             else
             {
-                MessageBox.Show("That bai");
+                MessageBox.Show("lỗi");
             }
         }
 
         private void btnXoa_Click(object sender, EventArgs e)
         {
-            string sql = "DELETE FROM SINH VIEN where MaNXB='" + txtMaNXB.Text.ToString() + "'";
-            if (lopchung.ThemSuaXoa(sql) == 1)
-            {
-                MessageBox.Show("Thanh cong");
-                LoadData("SELECT *FROM NHAXUATBAN");
+            DialogResult ok = MessageBox.Show("Bạn có chắc chắn xóa", "Thông báo", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
 
-                txtMaNXB.Text = "";
-                txtTenNXB.Text = "";
-            }
-            else
+            if (ok == DialogResult.Yes)
             {
-                MessageBox.Show("That bai");
+
+                string MaNXB = txtMaNXB.Text.ToString();
+
+                string sql = "DELETE FROM DOCGIA WHERE MANXB = '" + MaNXB + "'";
+
+                int ketqua = a.ThemSuaXoa(sql);
+
+                if (ketqua == 1)
+                {
+                    MessageBox.Show("Xóa Thành công");
+
+                    DataTable dt = a.LayDuLieuBang("SELECT * FROM NHAXUATBAN");
+
+                    dataGridView1.DataSource = dt;
+
+
+                }
+                else
+                {
+                    MessageBox.Show("lỗi");
+                }
+
             }
+
         }
 
         private void dataGridView1_CellClick(object sender, DataGridViewCellEventArgs e)
@@ -79,6 +108,13 @@ namespace Quanlythuvien
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
 
+        }
+
+        private void frm_nhaxuatban_Load(object sender, EventArgs e)
+        {
+            DataTable dt = a.LayDuLieuBang("SELECT * FROM NHAXUATBAN");
+
+            dataGridView1.DataSource = dt;
         }
     }
 }
