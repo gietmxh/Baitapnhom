@@ -62,5 +62,11 @@ namespace Quanlythuvien
         {
             
         }
+
+        private void quảnLýNXBToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frm_nhaxuatban a = new frm_nhaxuatban();
+            a.Show();
+        }
     }
 }
