@@ -41,6 +41,7 @@
             this.quảnLýNXBToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.thuêSáchToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.quảnLýThuêSáchToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.metroUserControl1 = new MetroFramework.Controls.MetroUserControl();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -53,9 +54,9 @@
             this.quảnLýSáchToolStripMenuItem,
             this.quảnLýNhàXuấtBảnToolStripMenuItem,
             this.thuêSáchToolStripMenuItem});
-            this.menuStrip1.Location = new System.Drawing.Point(0, 0);
+            this.menuStrip1.Location = new System.Drawing.Point(20, 60);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(646, 24);
+            this.menuStrip1.Size = new System.Drawing.Size(606, 24);
             this.menuStrip1.TabIndex = 0;
             this.menuStrip1.Text = "menuStrip1";
             this.menuStrip1.ItemClicked += new System.Windows.Forms.ToolStripItemClickedEventHandler(this.menuStrip1_ItemClicked_1);
@@ -72,7 +73,7 @@
             // đổiMậtKhẩiToolStripMenuItem
             // 
             this.đổiMậtKhẩiToolStripMenuItem.Name = "đổiMậtKhẩiToolStripMenuItem";
-            this.đổiMậtKhẩiToolStripMenuItem.Size = new System.Drawing.Size(146, 22);
+            this.đổiMậtKhẩiToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.đổiMậtKhẩiToolStripMenuItem.Text = "Đổi Mật Khẩu";
             this.đổiMậtKhẩiToolStripMenuItem.Click += new System.EventHandler(this.đổiMậtKhẩiToolStripMenuItem_Click);
             // 
@@ -113,6 +114,7 @@
             this.quảnLýThểLoạiToolStripMenuItem.Name = "quảnLýThểLoạiToolStripMenuItem";
             this.quảnLýThểLoạiToolStripMenuItem.Size = new System.Drawing.Size(166, 22);
             this.quảnLýThểLoạiToolStripMenuItem.Text = "Quản Lý Thể Loại";
+            this.quảnLýThểLoạiToolStripMenuItem.Click += new System.EventHandler(this.quảnLýThểLoạiToolStripMenuItem_Click);
             // 
             // quảnLýTácGiảToolStripMenuItem
             // 
@@ -132,7 +134,7 @@
             // quảnLýNXBToolStripMenuItem
             // 
             this.quảnLýNXBToolStripMenuItem.Name = "quảnLýNXBToolStripMenuItem";
-            this.quảnLýNXBToolStripMenuItem.Size = new System.Drawing.Size(144, 22);
+            this.quảnLýNXBToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.quảnLýNXBToolStripMenuItem.Text = "Quản Lý NXB";
             this.quảnLýNXBToolStripMenuItem.Click += new System.EventHandler(this.quảnLýNXBToolStripMenuItem_Click);
             // 
@@ -151,15 +153,25 @@
             this.quảnLýThuêSáchToolStripMenuItem.Text = "Quản lý thuê sách";
             this.quảnLýThuêSáchToolStripMenuItem.Click += new System.EventHandler(this.quảnLýThuêSáchToolStripMenuItem_Click);
             // 
+            // metroUserControl1
+            // 
+            this.metroUserControl1.Location = new System.Drawing.Point(20, 97);
+            this.metroUserControl1.Name = "metroUserControl1";
+            this.metroUserControl1.Size = new System.Drawing.Size(150, 150);
+            this.metroUserControl1.TabIndex = 1;
+            this.metroUserControl1.UseSelectable = true;
+            this.metroUserControl1.Load += new System.EventHandler(this.metroUserControl1_Load);
+            // 
             // frm_main
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(646, 365);
+            this.Controls.Add(this.metroUserControl1);
             this.Controls.Add(this.menuStrip1);
             this.MainMenuStrip = this.menuStrip1;
             this.Name = "frm_main";
-            this.Text = "Form1";
+            this.Text = "Quản Lý Chung";
             this.Load += new System.EventHandler(this.Form1_Load);
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
@@ -183,6 +195,7 @@
         private System.Windows.Forms.ToolStripMenuItem thuêSáchToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem quảnLýThuêSáchToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem quảnLýTácGiảToolStripMenuItem;
+        private MetroFramework.Controls.MetroUserControl metroUserControl1;
     }
 }
 

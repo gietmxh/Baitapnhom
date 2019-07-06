@@ -10,7 +10,7 @@ using System.Windows.Forms;
 
 namespace Quanlythuvien
 {
-    public partial class frm_main : Form
+    public partial class frm_main : MetroFramework.Forms.MetroForm
     {
         public frm_main()
         {
@@ -83,7 +83,19 @@ namespace Quanlythuvien
 
         private void quảnLýThuêSáchToolStripMenuItem_Click(object sender, EventArgs e)
         {
+            frm_quanlythuesach a = new frm_quanlythuesach();
+            a.Show();
+        }
 
+        private void metroUserControl1_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void quảnLýThểLoạiToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frm_theloai a = new frm_theloai();
+            a.Show();
         }
     }
 }

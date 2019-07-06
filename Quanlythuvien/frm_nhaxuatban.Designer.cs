@@ -48,42 +48,47 @@
             this.label1.Size = new System.Drawing.Size(137, 13);
             this.label1.TabIndex = 0;
             this.label1.Text = "QUẢN LÝ NHÀ XUẤT BẢN";
+            this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(74, 64);
+            this.label2.Location = new System.Drawing.Point(89, 77);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(95, 13);
             this.label2.TabIndex = 1;
             this.label2.Text = "Mã Nhà Xuất Bản ";
+            this.label2.Click += new System.EventHandler(this.label2_Click);
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(74, 115);
+            this.label3.Location = new System.Drawing.Point(89, 128);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(99, 13);
             this.label3.TabIndex = 2;
             this.label3.Text = "Tên Nhà Xuất Bản ";
+            this.label3.Click += new System.EventHandler(this.label3_Click);
             // 
             // txtMaNXB
             // 
-            this.txtMaNXB.Location = new System.Drawing.Point(176, 61);
+            this.txtMaNXB.Location = new System.Drawing.Point(191, 74);
             this.txtMaNXB.Name = "txtMaNXB";
             this.txtMaNXB.Size = new System.Drawing.Size(100, 20);
             this.txtMaNXB.TabIndex = 3;
+            this.txtMaNXB.TextChanged += new System.EventHandler(this.txtMaNXB_TextChanged);
             // 
             // txtTenNXB
             // 
-            this.txtTenNXB.Location = new System.Drawing.Point(176, 108);
+            this.txtTenNXB.Location = new System.Drawing.Point(191, 121);
             this.txtTenNXB.Name = "txtTenNXB";
             this.txtTenNXB.Size = new System.Drawing.Size(100, 20);
             this.txtTenNXB.TabIndex = 4;
+            this.txtTenNXB.TextChanged += new System.EventHandler(this.txtTenNXB_TextChanged);
             // 
             // btnThem
             // 
-            this.btnThem.Location = new System.Drawing.Point(77, 152);
+            this.btnThem.Location = new System.Drawing.Point(92, 165);
             this.btnThem.Name = "btnThem";
             this.btnThem.Size = new System.Drawing.Size(75, 23);
             this.btnThem.TabIndex = 5;
@@ -93,7 +98,7 @@
             // 
             // btnCapNhap
             // 
-            this.btnCapNhap.Location = new System.Drawing.Point(186, 152);
+            this.btnCapNhap.Location = new System.Drawing.Point(201, 165);
             this.btnCapNhap.Name = "btnCapNhap";
             this.btnCapNhap.Size = new System.Drawing.Size(75, 23);
             this.btnCapNhap.TabIndex = 6;
@@ -103,7 +108,7 @@
             // 
             // btnXoa
             // 
-            this.btnXoa.Location = new System.Drawing.Point(289, 152);
+            this.btnXoa.Location = new System.Drawing.Point(304, 165);
             this.btnXoa.Name = "btnXoa";
             this.btnXoa.Size = new System.Drawing.Size(75, 23);
             this.btnXoa.TabIndex = 7;
@@ -114,7 +119,7 @@
             // dataGridView1
             // 
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(77, 192);
+            this.dataGridView1.Location = new System.Drawing.Point(92, 205);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.Size = new System.Drawing.Size(289, 116);
             this.dataGridView1.TabIndex = 8;
@@ -125,7 +130,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(413, 339);
+            this.ClientSize = new System.Drawing.Size(433, 347);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.btnXoa);
             this.Controls.Add(this.btnCapNhap);
@@ -136,7 +141,6 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Name = "frm_nhaxuatban";
-            this.Text = "frm_nhaxuatban";
             this.Load += new System.EventHandler(this.frm_nhaxuatban_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);

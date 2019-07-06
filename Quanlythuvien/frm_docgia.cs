@@ -10,7 +10,7 @@ using System.Windows.Forms;
 
 namespace Quanlythuvien
 {
-    public partial class frm_docgia : Form
+    public partial class frm_docgia : MetroFramework.Forms.MetroForm
     {
         LOPDUNGCHUNG a = new LOPDUNGCHUNG();
 

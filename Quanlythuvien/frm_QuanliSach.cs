@@ -10,7 +10,7 @@ using System.Windows.Forms;
 
 namespace Quanlythuvien
 {
-    public partial class frm_QuanliSach : Form
+    public partial class frm_QuanliSach : MetroFramework.Forms.MetroForm
     {
         LOPDUNGCHUNG a = new LOPDUNGCHUNG();
         public frm_QuanliSach()
@@ -27,7 +27,8 @@ namespace Quanlythuvien
             string Manhaxuatban = txtManhaxuatban.Text.ToString();
             string Namxuatban = txtNamxuatban.Text.ToString();
 
-            string sql = "INSERT INTO QUANLISACH VALUE('" + txtMasach + "','" + txtTensach + "','" + txtMatacgia + "','" + txtTensach + "','" + txtMatheloai + "','" + txtManhaxuatban + "','" + txtNamxuatban + "')";
+            string sql = "INSERT INTO SACH VALUES('" + Masach + "','" + Tensach + "','" + Matacgia + "','" + Matheloai + "','" + Manhaxuatban + "','" + Namxuatban + "')";
+
 
             int ketqua = a.ThemSuaXoa(sql);
 
@@ -35,7 +36,7 @@ namespace Quanlythuvien
             {
                 MessageBox.Show("thêm thành công");
 
-                DataTable dt = a.LayDuLieuBang("SELECT * FROM DOCGIA");
+                DataTable dt = a.LayDuLieuBang("SELECT * FROM SACH");
 
                 dataGridView1.DataSource = dt;
 
@@ -67,14 +68,14 @@ namespace Quanlythuvien
             string Manhaxuatban = txtManhaxuatban.Text.ToString();
             string Namxuatban = txtNamxuatban.Text.ToString();
 
-            string sql = "UPDATA QuanliSach SET MASach='" + Masach + "',Tensach ='" + Tensach + "',Matheloai='" + Matheloai + "',Matacgia='" + Matacgia + "',Manhaxuatban='" + Manhaxuatban + "',Namxuatban='" + Namxuatban + "'";
+            string sql = "UPDATA SACH SET MASACH='" + Masach + "',TENSACH ='" + Tensach + "',MATHELOAI='" + Matheloai + "',MATACGIA='" + Matacgia + "',MANXB='" + Manhaxuatban + "',NAMXB='" + Namxuatban + "' WHERE MASACH = '"+ Masach + "' ";
             int ketqua = a.ThemSuaXoa(sql);
 
             if (ketqua == 1)
             {
                 MessageBox.Show("Sửa thành công");
 
-                DataTable dt = a.LayDuLieuBang("SELECT * FROM QuanliSach");
+                DataTable dt = a.LayDuLieuBang("SELECT * FROM SACH");
 
                 dataGridView1.DataSource = dt;
 
@@ -95,7 +96,7 @@ namespace Quanlythuvien
 
                 string MaSach = txtMasach.Text.ToString();
 
-                string sql = "DELETE FROM DOCGIA WHERE MANXB = '" + MaSach + "'";
+                string sql = "DELETE FROM SACH WHERE MASACH = '" + MaSach + "'";
 
                 int ketqua = a.ThemSuaXoa(sql);
 
@@ -103,7 +104,7 @@ namespace Quanlythuvien
                 {
                     MessageBox.Show("Xóa Thành công");
 
-                    DataTable dt = a.LayDuLieuBang("SELECT * FROM NHAXUATBAN");
+                    DataTable dt = a.LayDuLieuBang("SELECT * FROM SACH");
 
                     dataGridView1.DataSource = dt;
 
@@ -115,6 +116,13 @@ namespace Quanlythuvien
                 }
 
             }
+        }
+
+        private void frm_QuanliSach_Load(object sender, EventArgs e)
+        {
+            DataTable dt = a.LayDuLieuBang("SELECT * FROM SACH");
+
+            dataGridView1.DataSource = dt;
         }
     }
 }

@@ -10,13 +10,15 @@ using System.Windows.Forms;
 
 namespace Quanlythuvien
 {
-    public partial class frm_tacgia : Form
+    public partial class frm_tacgia : MetroFramework.Forms.MetroForm
     {
 
         LOPDUNGCHUNG a = new LOPDUNGCHUNG();
         public frm_tacgia()
         {
             InitializeComponent();
+
+
         }
 
         private void docgia_them_Click(object sender, EventArgs e)
@@ -118,6 +120,13 @@ namespace Quanlythuvien
             textBox2.Text = dataGridView1.CurrentRow.Cells["TENTACGIA"].Value.ToString();
             textBox3.Text = dataGridView1.CurrentRow.Cells["WEBSITE"].Value.ToString();
             textBox4.Text = dataGridView1.CurrentRow.Cells["GHICHU"].Value.ToString();
+        }
+
+        private void frm_tacgia_Load(object sender, EventArgs e)
+        {
+            DataTable dt = a.LayDuLieuBang("SELECT * FROM TACGIA");
+
+            dataGridView1.DataSource = dt;
         }
     }
 }

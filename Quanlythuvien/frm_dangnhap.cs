@@ -14,13 +14,16 @@ using System.Data.SqlClient;
 
 namespace Quanlythuvien
 {
-    public partial class frm_dangnhap : Form
+    public partial class frm_dangnhap : MetroFramework.Forms.MetroForm
     {
 
         LOPDUNGCHUNG a = new LOPDUNGCHUNG();
         public frm_dangnhap()
         {
             InitializeComponent();
+            txtMatKhau.PasswordChar = '*';
+            // The control will allow no more than 14 characters.  
+            txtMatKhau.MaxLength = 14;
 
 
         }

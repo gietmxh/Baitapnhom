@@ -10,27 +10,27 @@ using System.Windows.Forms;
 
 namespace Quanlythuvien
 {
-    public partial class frm_nhaxuatban : MetroFramework.Forms.MetroForm
+    public partial class frm_theloai : MetroFramework.Forms.MetroForm
     {
         LOPDUNGCHUNG a = new LOPDUNGCHUNG();
-        public frm_nhaxuatban()
+        public frm_theloai()
         {
             InitializeComponent();
         }
-       
+
         private void btnThem_Click(object sender, EventArgs e)
         {
             string MaNXB = txtMaNXB.Text.ToString();
             string TenNXB = txtTenNXB.Text.ToString();
            
-            string sql = "INSERT INTO NHAXUATBAN VALUES('" + MaNXB + "','"+ TenNXB + "');";
+            string sql = "INSERT INTO THELOAI VALUES('" + MaNXB + "','"+ TenNXB + "');";
             int ketqua = a.ThemSuaXoa(sql);
 
             if (ketqua == 1)
             {
                 MessageBox.Show("thêm thành công");
 
-                DataTable dt = a.LayDuLieuBang("SELECT * FROM NHAXUATBAN");
+                DataTable dt = a.LayDuLieuBang("SELECT * FROM THELOAI");
 
                 dataGridView1.DataSource = dt;
 
@@ -40,7 +40,6 @@ namespace Quanlythuvien
             {
                 MessageBox.Show("lỗi");
             }
-
         }
 
         private void btnCapNhap_Click(object sender, EventArgs e)
@@ -48,14 +47,14 @@ namespace Quanlythuvien
             string MaNXB = txtMaNXB.Text.ToString();
             string TenNXB = txtTenNXB.Text.ToString();
 
-            string sql = "UPDATE NHAXUATBAN SET MANXB='"+ MaNXB + "',TENNXB ='"+ TenNXB + "' WHERE MANXB='" + MaNXB + "'";
+            string sql = "UPDATE THELOAI SET MATHELOAI='" + MaNXB + "',TENTHELOAI ='" + TenNXB + "' WHERE MATHELOAI='" + MaNXB + "'";
             int ketqua = a.ThemSuaXoa(sql);
 
             if (ketqua == 1)
             {
                 MessageBox.Show("Sửa thành công");
 
-                DataTable dt = a.LayDuLieuBang("SELECT * FROM NHAXUATBAN");
+                DataTable dt = a.LayDuLieuBang("SELECT * FROM THELOAI");
 
                 dataGridView1.DataSource = dt;
 
@@ -65,6 +64,8 @@ namespace Quanlythuvien
             {
                 MessageBox.Show("lỗi");
             }
+
+
         }
 
         private void btnXoa_Click(object sender, EventArgs e)
@@ -76,7 +77,7 @@ namespace Quanlythuvien
 
                 string MaNXB = txtMaNXB.Text.ToString();
 
-                string sql = "DELETE FROM NHAXUATBAN WHERE MANXB = '" + MaNXB + "'";
+                string sql = "DELETE FROM THELOAI WHERE MATHELOAI = '" + MaNXB + "'";
 
                 int ketqua = a.ThemSuaXoa(sql);
 
@@ -84,7 +85,7 @@ namespace Quanlythuvien
                 {
                     MessageBox.Show("Xóa Thành công");
 
-                    DataTable dt = a.LayDuLieuBang("SELECT * FROM NHAXUATBAN");
+                    DataTable dt = a.LayDuLieuBang("SELECT * FROM THELOAI");
 
                     dataGridView1.DataSource = dt;
 
@@ -96,13 +97,6 @@ namespace Quanlythuvien
                 }
 
             }
-
-        }
-
-        private void dataGridView1_CellClick(object sender, DataGridViewCellEventArgs e)
-        {
-            txtMaNXB.Text = dataGridView1.CurrentRow.Cells["MaNXB"].Value.ToString();
-            txtTenNXB.Text = dataGridView1.CurrentRow.Cells["TenNXB"].Value.ToString();
         }
 
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
@@ -110,36 +104,11 @@ namespace Quanlythuvien
 
         }
 
-        private void frm_nhaxuatban_Load(object sender, EventArgs e)
+        private void frm_theloai_Load(object sender, EventArgs e)
         {
-            DataTable dt = a.LayDuLieuBang("SELECT * FROM NHAXUATBAN");
+            DataTable dt = a.LayDuLieuBang("SELECT * FROM THELOAI");
 
             dataGridView1.DataSource = dt;
-        }
-
-        private void txtTenNXB_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void txtMaNXB_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label3_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label2_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label1_Click(object sender, EventArgs e)
-        {
-
         }
     }
 }
