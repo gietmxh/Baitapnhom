@@ -33,5 +33,10 @@ namespace Quanlythuvien
             string ngaythu = dateTimePicker1.Text.ToString();
             string madocgia = txtmadocgia.Text.ToString();
         }
+
+        private void frm_quanlythuesach_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

@@ -80,5 +80,10 @@ namespace Quanlythuvien
             frm_tacgia a = new frm_tacgia();
             a.Show();
         }
+
+        private void quảnLýThuêSáchToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

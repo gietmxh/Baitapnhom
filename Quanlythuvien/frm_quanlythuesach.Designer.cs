@@ -90,7 +90,7 @@
             // 
             // btnThem
             // 
-            this.btnThem.Location = new System.Drawing.Point(174, 249);
+            this.btnThem.Location = new System.Drawing.Point(121, 224);
             this.btnThem.Name = "btnThem";
             this.btnThem.Size = new System.Drawing.Size(75, 23);
             this.btnThem.TabIndex = 6;
@@ -100,7 +100,7 @@
             // 
             // btnXoa
             // 
-            this.btnXoa.Location = new System.Drawing.Point(472, 249);
+            this.btnXoa.Location = new System.Drawing.Point(460, 224);
             this.btnXoa.Name = "btnXoa";
             this.btnXoa.Size = new System.Drawing.Size(75, 23);
             this.btnXoa.TabIndex = 7;
@@ -116,7 +116,7 @@
             // 
             // btnSua
             // 
-            this.btnSua.Location = new System.Drawing.Point(335, 249);
+            this.btnSua.Location = new System.Drawing.Point(296, 224);
             this.btnSua.Name = "btnSua";
             this.btnSua.Size = new System.Drawing.Size(75, 23);
             this.btnSua.TabIndex = 11;
@@ -126,7 +126,7 @@
             // listBox1
             // 
             this.listBox1.FormattingEnabled = true;
-            this.listBox1.Location = new System.Drawing.Point(558, 119);
+            this.listBox1.Location = new System.Drawing.Point(558, 99);
             this.listBox1.Name = "listBox1";
             this.listBox1.Size = new System.Drawing.Size(120, 95);
             this.listBox1.TabIndex = 14;
@@ -149,7 +149,7 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(479, 73);
+            this.label4.Location = new System.Drawing.Point(495, 73);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(52, 13);
             this.label4.TabIndex = 17;
@@ -158,7 +158,7 @@
             // dataGridView1
             // 
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(121, 298);
+            this.dataGridView1.Location = new System.Drawing.Point(100, 275);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.Size = new System.Drawing.Size(475, 150);
             this.dataGridView1.TabIndex = 18;
@@ -184,6 +184,7 @@
             this.Controls.Add(this.label1);
             this.Name = "frm_quanlythuesach";
             this.Text = "frm_quanlythuesach";
+            this.Load += new System.EventHandler(this.frm_quanlythuesach_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

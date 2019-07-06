@@ -97,6 +97,12 @@
     <Compile Include="frm_QuanliSach.Designer.cs">
       <DependentUpon>frm_QuanliSach.cs</DependentUpon>
     </Compile>
+    <Compile Include="frm_quanlythuesach.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_quanlythuesach.Designer.cs">
+      <DependentUpon>frm_quanlythuesach.cs</DependentUpon>
+    </Compile>
     <Compile Include="frm_tacgia.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -123,6 +129,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frm_QuanliSach.resx">
       <DependentUpon>frm_QuanliSach.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm_quanlythuesach.resx">
+      <DependentUpon>frm_quanlythuesach.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frm_tacgia.resx">
       <DependentUpon>frm_tacgia.cs</DependentUpon>
