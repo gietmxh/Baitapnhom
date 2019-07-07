@@ -23,14 +23,14 @@ namespace Quanlythuvien
             string MaNXB = txtMaNXB.Text.ToString();
             string TenNXB = txtTenNXB.Text.ToString();
            
-            string sql = "INSERT INTO NHAXUATBAN VALUE('" + txtMaNXB + "','"+txtTenNXB+"')";
+            string sql = "INSERT INTO NHAXUATBAN VALUES('" + MaNXB + "','"+ TenNXB + "');";
             int ketqua = a.ThemSuaXoa(sql);
 
             if (ketqua == 1)
             {
                 MessageBox.Show("thêm thành công");
 
-                DataTable dt = a.LayDuLieuBang("SELECT * FROM DOCGIA");
+                DataTable dt = a.LayDuLieuBang("SELECT * FROM NHAXUATBAN");
 
                 dataGridView1.DataSource = dt;
 
@@ -48,7 +48,7 @@ namespace Quanlythuvien
             string MaNXB = txtMaNXB.Text.ToString();
             string TenNXB = txtTenNXB.Text.ToString();
 
-            string sql = "UPDATA NHAXUATBAN SET MANXB='"+MaNXB+"',TENNXB ='"+TenNXB+"'";
+            string sql = "UPDATE NHAXUATBAN SET MANXB='"+ MaNXB + "',TENNXB ='"+ TenNXB + "' WHERE MANXB='" + MaNXB + "'";
             int ketqua = a.ThemSuaXoa(sql);
 
             if (ketqua == 1)
@@ -76,7 +76,7 @@ namespace Quanlythuvien
 
                 string MaNXB = txtMaNXB.Text.ToString();
 
-                string sql = "DELETE FROM DOCGIA WHERE MANXB = '" + MaNXB + "'";
+                string sql = "DELETE FROM NHAXUATBAN WHERE MANXB = '" + MaNXB + "'";
 
                 int ketqua = a.ThemSuaXoa(sql);
 

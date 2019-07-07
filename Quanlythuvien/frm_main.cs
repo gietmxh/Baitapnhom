@@ -68,5 +68,17 @@ namespace Quanlythuvien
             frm_nhaxuatban a = new frm_nhaxuatban();
             a.Show();
         }
+
+        private void quảnLýSáchToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            frm_QuanliSach a = new frm_QuanliSach();
+            a.Show();
+        }
+
+        private void quảnLýTácGiảToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frm_tacgia a = new frm_tacgia();
+            a.Show();
+        }
     }
 }
